@@ -119,9 +119,9 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  'admin.steps2ar.org',
                  'api.steps2advancedreading.org',
                  'admin.steps2advancedreading.org',
-                 'star.flagshipconnect',
-                 'api.star.flagshipconnect',
-                 'admin.star.flagshipconnect',
+                 'star.flagshipconnect.org',
+                 'api.star.flagshipconnect.org',
+                 'admin.star.flagshipconnect.org',
 ]
 
 
@@ -286,7 +286,7 @@ TEST_RUNNER = 'ereadingtool.settings-test.UnManagedModelTestRunner'
 # Dashboard connection stuff
 DASHBOARD_ENDPOINT = 'https://lrs.languageflagshipdashboard.com/data/xAPI'
 DASHBOARD_UPDATE_DELTA = datetime.timedelta(seconds=86400)
-DASHBOARD_STAR_ENDPOINT = 'https://stepstoadvancedreading.org'
+DASHBOARD_STAR_ENDPOINT = 'https://star.flagshipconnect.org'
 # LRS is the Learning Record Store
 DASHBOARD_LRS_ENDPOINT = "https://lrs.languageflagshipdashboard.com"
 try:
