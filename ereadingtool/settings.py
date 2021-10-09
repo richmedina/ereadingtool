@@ -119,6 +119,9 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  'admin.steps2ar.org',
                  'api.steps2advancedreading.org',
                  'admin.steps2advancedreading.org',
+                 'star.flagshipconnect',
+                 'api.star.flagshipconnect',
+                 'admin.star.flagshipconnect',
 ]
 
 
