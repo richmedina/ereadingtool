@@ -29,7 +29,7 @@ CHANNEL_LAYERS = {
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-ADMINS = [('Andrew', 'als2@pdx.edu'), ('EReader', 'ereader@pdx.edu')]
+ADMINS = [('RAM', 'rmedina@hawaii.edu'),]
 
 # Prevents CommondMiddleware from `APPEND_SLASH` (defaulted to `True`)
 # adding a forward slash to all URLs sent to the backend (by way of 301)
