@@ -66,7 +66,7 @@ services:
       - html:/usr/share/nginx/html
       - dhparam:/etc/nginx/dhparam
       - certs:/etc/nginx/certs:ro
-      - ${PWD}/cors.conf:/etc/nginx/vhost.d/api.steps2ar.org
+      - ${PWD}/cors.conf:/etc/nginx/vhost.d/api.star.flagshipconnect.org
     depends_on:
       - django_backend
       - node_frontend
