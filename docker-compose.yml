@@ -8,10 +8,10 @@ services:
     env_file:
       - secrets.env
     environment:
-      - VIRTUAL_HOST=api.steps2ar.org
+      - VIRTUAL_HOST=api.star.flagshipconnect.org
       - VIRTUAL_PORT=8000
-      - LETSENCRYPT_HOST=api.steps2ar.org
-      - FRONTEND_HOST=steps2ar.org
+      - LETSENCRYPT_HOST=api.star.flagshipconnect.org
+      - FRONTEND_HOST=star.flagshipconnect.org
       - REDIS_ENDPOINT=redis
     expose:
       - "8000"
@@ -26,8 +26,8 @@ services:
       dockerfile: Dockerfile.node
     container_name: node_frontend
     environment:
-      - VIRTUAL_HOST=steps2ar.org
-      - LETSENCRYPT_HOST=steps2ar.org
+      - VIRTUAL_HOST=star.flagshipconnect.org
+      - LETSENCRYPT_HOST=star.flagshipconnect.org
     expose:
       - "80"
     depends_on:
@@ -42,9 +42,9 @@ services:
     env_file:
       - secrets.env
     environment:
-      - VIRTUAL_HOST=admin.steps2ar.org
+      - VIRTUAL_HOST=admin.star.flagshipconnect.org
       - VIRTUAL_PORT=8001
-      - LETSENCRYPT_HOST=admin.steps2ar.org
+      - LETSENCRYPT_HOST=admin.star.flagshipconnect.org
     expose:
       - "8001"
     restart: always
