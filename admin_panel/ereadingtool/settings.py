@@ -114,6 +114,9 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  'admin.steps2ar.org',
                  'api.steps2advancedreading.org',
                  'admin.steps2advancedreading.org',
+                 'star.flagshipconnect.org',
+                 'api.star.flagshipconnect.org',
+                 'admin.star.flagshipconnect.org',
 ]
 
 CSP_DEFAULT_SRC = ("'self'",)
