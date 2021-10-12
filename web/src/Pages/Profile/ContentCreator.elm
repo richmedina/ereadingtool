@@ -322,8 +322,8 @@ viewInstructorInviteMsg (SafeModel model) =
             After creating an invitation, send the new content creator the invite code and ask
             them to sign up at
             """
-        , Html.a [ href "https://stepstoadvancedreading.org/signup/content-creator" ]
-            [ text "https://stepstoadvancedreading.org/signup/content-creator" ]
+        , Html.a [ href "https://star.flagshipconnect.org/signup/content-creator" ]
+            [ text "https://star.flagshipconnect.org/signup/content-creator" ]
         , Html.text
             """ before the expiration
             time. The content creator will not be emailed automatically.
