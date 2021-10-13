@@ -65,7 +65,7 @@ view { params } =
 viewFirstSection : Html Msg
 viewFirstSection =
     Markdown.toHtml [] """
-This page will give you an overview of the STAR (Steps to Advanced Reading) website’s functionality without
+STARDEV: This page will give you an overview of the STAR (Steps to Advanced Reading) website’s functionality without
 requiring you to create an account. The main function of the website is to allow students to read texts at
 and above their proficiency level in Russian and answer comprehension questions on them. The secondary
 function of the site allows students to save words encountered in texts to flashcards and to review and
