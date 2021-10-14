@@ -1,6 +1,9 @@
 Django==2.2.20
 django-taggit
 ipython
+DAWG
+DAWG-Python
+rjsmin==1.1.0
 rjsmin
 django-csp
 hypothesis[django]
