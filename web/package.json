@@ -15,8 +15,7 @@
     "build:elm-spa": "elm-spa build .",
     "build:staging:elm": "NODE_ENV=devel parcel build src/index.html --no-minify",
     "dev:elm": "parcel src/index.html",
-    "dev:elm-spa": "chokidar src/Pages -c \"elm-spa build .\"",
-    "preinstall": "npx npm-force-resolutions"
+    "dev:elm-spa": "chokidar src/Pages -c \"elm-spa build .\""
   },
   "keywords": [],
   "author": "",
@@ -45,8 +44,5 @@
   },
   "dependencies": {
     "jwt-decode": "^3.1.2"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
   }
 }
