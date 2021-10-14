@@ -16,7 +16,7 @@ RUN apt update -y \
     && git checkout master \
     && cd web \
     && npm uninstall parcel-bundler \
-    && npm i --save-dev parcel-bundler@1.12.3 \
+    && npm i -g parcel-bundler@1.12.3 \
     # && npm install -g parcel-bundler@1.12.4 \
     && npm install \
     && npm run build \
