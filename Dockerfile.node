@@ -15,7 +15,8 @@ RUN apt update -y \
     && cd ereadingtool \
     && git checkout master \
     && cd web \
-    && npm uninstall parcel-bundler \
+    && npm install npm-force-resolutions \
+    # && npm uninstall parcel-bundler \
     # && npm i -g parcel-bundler@1.12.3 \
     && npm install -g parcel-bundler@1.12.4 \
     && npm install \
