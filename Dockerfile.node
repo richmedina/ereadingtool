@@ -21,7 +21,7 @@ RUN apt update -y \
     # && npm i -g parcel-bundler@1.12.3 \
     # && npm install -g parcel-bundler@1.12.4 \
     && npm install -g parcel-bundler \
-    && npx browserslist@latest --update-db
+    && npx browserslist@latest --update-db \
     && npm install \
     && npm run build \
     && apt-get install -y nginx \
