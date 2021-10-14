@@ -16,8 +16,8 @@ RUN apt update -y \
     && git checkout master \
     && cd web \
     && npm uninstall parcel-bundler \
-    && npm i -g parcel-bundler@1.12.3 \
-    # && npm install -g parcel-bundler@1.12.4 \
+    # && npm i -g parcel-bundler@1.12.3 \
+    && npm install -g parcel-bundler@1.12.4 \
     && npm install \
     && npm run build \
     && apt-get install -y nginx \
