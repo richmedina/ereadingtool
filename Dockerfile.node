@@ -8,10 +8,11 @@ RUN apt update -y \
     && touch logs/access.log \
     && touch logs/error.log \
     && git clone https://github.com/richmedina/ereadingtool.git \
-    && curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz \
-    && gunzip elm.gz \
-    && chmod +x elm \
-    && mv elm /usr/local/bin \
+    # && curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz \
+    && npm install -g elm \
+    # && gunzip elm.gz \
+    # && chmod +x elm \
+    # && mv elm /usr/local/bin \
     && cd ereadingtool \
     && git checkout master \
     && cd web \
