@@ -16,7 +16,7 @@
     "build:staging:elm": "NODE_ENV=devel parcel build src/index.html --no-minify",
     "dev:elm": "parcel src/index.html",
     "dev:elm-spa": "chokidar src/Pages -c \"elm-spa build .\"",
-    "preinstall": "npx \"npm-force-resolutions\"",
+    "preinstall": "npx npm-force-resolutions"
   },
   "keywords": [],
   "author": "",
