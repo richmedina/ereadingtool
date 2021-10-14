@@ -15,7 +15,9 @@ RUN apt update -y \
     && cd ereadingtool \
     && git checkout master \
     && cd web \
-    && npm install -g parcel-bundler@1.12.4 \
+    && npm uninstall -D parcel-bundler \
+    && npm install -D parcel@next \
+    # && npm install -g parcel-bundler@1.12.4 \
     && npm install \
     && npm run build \
     && apt-get install -y nginx \
