@@ -23,7 +23,7 @@ RUN apt update -y \
     && npm install -g parcel-bundler \
     && npx browserslist@latest --update-db \
     && npm install \
-    && npm run build \
+    && npm run build:staging \
     && apt-get install -y nginx \
     && mkdir -p /var/www/star.flagshipconnect.org/html \
     && chown -R $USER:$USER /var/www/star.flagshipconnect.org/html \
