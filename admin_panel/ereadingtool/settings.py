@@ -96,7 +96,7 @@ LOGGING = {
     },
 }
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '@sc@-9urfp%(499mt0y2yy(7()c)(qzj516bmhvfk0@stu4f'
 
 DEBUG = False 
 DEV = True
