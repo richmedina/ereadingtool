@@ -5,11 +5,11 @@ server {
         access_log /app/logs/access.log;
         error_log /app/logs/error.log warn;
 
-        root /var/www/star.flagshipconnect.org/html;
+        root /var/www/clt.developers.edu/html;
 
         index index.html index.htm index.nginx-debian.html;
 
-        server_name star.flagshipconnect.org www.star.flagshipconnect.org;
+        server_name clt.developers.edu www.clt.developers.edu;
 
         location / {
                 try_files $uri /index.html;

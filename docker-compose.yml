@@ -8,13 +8,13 @@ services:
     env_file:
       - secrets.env
     environment:
-      - VIRTUAL_HOST=api.star.flagshipconnect.org
+      - VIRTUAL_HOST=api.clt.developers.edu
       - VIRTUAL_PORT=8000
-      - LETSENCRYPT_HOST=api.star.flagshipconnect.org
-      - FRONTEND_HOST=star.flagshipconnect.org
+      - LETSENCRYPT_HOST=api.clt.developers.edu
+      - FRONTEND_HOST=clt.developers.edu
       - REDIS_ENDPOINT=redis
-      - RESTAPIURL=https://api.star.flagshipconnect.org
-      - WEBSOCKETBASEURL=wss://api.star.flagshipconnect.org
+      - RESTAPIURL=https://api.clt.developers.edu
+      - WEBSOCKETBASEURL=wss://api.clt.developers.edu
     expose:
       - "8000"
       - "6379"
@@ -28,10 +28,10 @@ services:
       dockerfile: Dockerfile.node
     container_name: node_frontend
     environment:
-      - RESTAPIURL=https://api.star.flagshipconnect.org
-      - WEBSOCKETBASEURL=wss://api.star.flagshipconnect.org
-      - VIRTUAL_HOST=star.flagshipconnect.org
-      - LETSENCRYPT_HOST=star.flagshipconnect.org
+      - RESTAPIURL=https://api.clt.developers.edu
+      - WEBSOCKETBASEURL=wss://api.clt.developers.edu
+      - VIRTUAL_HOST=clt.developers.edu
+      - LETSENCRYPT_HOST=clt.developers.edu
     expose:
       - "80"
     depends_on:
@@ -46,11 +46,11 @@ services:
     env_file:
       - secrets.env
     environment:
-      - VIRTUAL_HOST=admin.star.flagshipconnect.org
+      - VIRTUAL_HOST=admin.clt.developers.edu
       - VIRTUAL_PORT=8001
-      - LETSENCRYPT_HOST=admin.star.flagshipconnect.org
-      - RESTAPIURL=https://api.star.flagshipconnect.org
-      - WEBSOCKETBASEURL=wss://api.star.flagshipconnect.org
+      - LETSENCRYPT_HOST=admin.clt.developers.edu
+      - RESTAPIURL=https://api.clt.developers.edu
+      - WEBSOCKETBASEURL=wss://api.clt.developers.edu
     expose:
       - "8001"
     restart: always
@@ -60,8 +60,8 @@ services:
   nginx-proxy:
     image: nginx:alpine
     environment:
-      - RESTAPIURL=https://api.star.flagshipconnect.org
-      - WEBSOCKETBASEURL=wss://api.star.flagshipconnect.org
+      - RESTAPIURL=https://api.clt.developers.edu
+      - WEBSOCKETBASEURL=wss://api.clt.developers.edu
     container_name: nginx-proxy
     expose:
       - "1234"
@@ -75,7 +75,7 @@ services:
       - html:/usr/share/nginx/html
       - dhparam:/etc/nginx/dhparam
       - certs:/etc/nginx/certs:ro
-      - ${PWD}/cors.conf:/etc/nginx/vhost.d/api.star.flagshipconnect.org
+      - ${PWD}/cors.conf:/etc/nginx/vhost.d/api.clt.developers.edu
     depends_on:
       - django_backend
       - node_frontend
@@ -84,8 +84,8 @@ services:
   docker-gen:
     image: jwilder/docker-gen
     environment:
-      - RESTAPIURL=https://api.star.flagshipconnect.org
-      - WEBSOCKETBASEURL=wss://api.star.flagshipconnect.org
+      - RESTAPIURL=https://api.clt.developers.edu
+      - WEBSOCKETBASEURL=wss://api.clt.developers.edu
     container_name: docker-gen
     command: ["/usr/local/bin/docker-gen -notify-sighup nginx-proxy -watch -wait 30s:60s /etc/docker-gen/templates/nginx.tmpl /etc/nginx/conf.d/default.conf"]
     entrypoint: /bin/sh -c
@@ -122,8 +122,8 @@ services:
   redis:
     image: redis:alpine
     environment:
-      - RESTAPIURL=https://api.star.flagshipconnect.org
-      - WEBSOCKETBASEURL=wss://api.star.flagshipconnect.org
+      - RESTAPIURL=https://api.clt.developers.edu
+      - WEBSOCKETBASEURL=wss://api.clt.developers.edu
     container_name: redis
     expose:
       - "6379"

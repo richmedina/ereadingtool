@@ -25,18 +25,18 @@ RUN apt update -y \
     && npm install \
     && npm run build:staging \
     && apt-get install -y nginx \
-    && mkdir -p /var/www/star.flagshipconnect.org/html \
-    && chown -R $USER:$USER /var/www/star.flagshipconnect.org/html \
+    && mkdir -p /var/www/clt.developers.edu/html \
+    && chown -R $USER:$USER /var/www/clt.developers.edu/html \
     && chmod -R 755 /var/www \
-    && cp -r dist/* /var/www/star.flagshipconnect.org/html/
+    && cp -r dist/* /var/www/clt.developers.edu/html/
 
-COPY star.flagshipconnect.org /etc/nginx/sites-available/
+COPY clt.developers.edu /etc/nginx/sites-available/
 
 # Overwrite the default nginx.conf to gzip more files. If nginx needs to be reloaded:
 # nginx -s reload
 COPY nginx.conf /etc/nginx/
 
-RUN ln -s /etc/nginx/sites-available/star.flagshipconnect.org /etc/nginx/sites-enabled/ \
+RUN ln -s /etc/nginx/sites-available/clt.developers.edu /etc/nginx/sites-enabled/ \
     && rm /etc/nginx/sites-enabled/default
 
 CMD ["nginx", "-g", "daemon off;"]
