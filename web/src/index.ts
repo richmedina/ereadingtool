@@ -6,8 +6,8 @@ type User = { user: { id: number; token: string; role: string } };
 type ShowHelp = { showHelp: boolean };
 type Creds = { email: string; password: string; role: string };
 
-const restApiUrl: string = 'https://api.star.flagshipconnect.org';//process.env.RESTAPIURL;
-const websocketBaseUrl: string = 'wss://api.star.flagshipconnect.org';//process.env.WEBSOCKETBASEURL;
+const restApiUrl: string = 'https://api.clt.developers.edu';//process.env.RESTAPIURL;
+const websocketBaseUrl: string = 'wss://api.clt.developers.edu';//process.env.WEBSOCKETBASEURL;
 const authStoreKey: string = 'user';
 let sockets = {};
 
